@@ -1,4 +1,4 @@
-[Print](https://github.com/sarahcnyt/data-journalism/blob/master/class1/readme.md)
+[Print](https://gitprint.com/sarahcnyt/data-journalism/blob/master/class1/readme.md)
 
 ## Getting into data journalism
 
