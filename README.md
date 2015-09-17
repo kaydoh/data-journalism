@@ -2,11 +2,10 @@ Skills for data journalism
 =======
 
 Fall 2015
+this website: [http://github.com/sarahcnyt/data-journalism](http://github.com/sarahcnyt/data-journalism)
 
 Sarah Cohen / sarah.cohen@columbia.edu / @sarahcnyt
-(Thursday, 6-9pm)  : [SCHEDULE](Schedule)
-
-
+(Thursday, 6-9pm)  
 
 Rob Gebeloff / rgebeloff@nytimes.com
 (Wednesdsay, 6-9pm) : [SCHEDULE](Schedule)
