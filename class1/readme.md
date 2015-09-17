@@ -1,3 +1,5 @@
+[Print](https://github.com/sarahcnyt/data-journalism/blob/master/class1/readme.md)
+
 ## Getting into data journalism
 
 ### What is CAR and what can you do with it?
