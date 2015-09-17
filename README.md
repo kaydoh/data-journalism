@@ -2,6 +2,7 @@ Skills for data journalism
 =======
 
 Fall 2015
+
 this website: [http://github.com/sarahcnyt/data-journalism](http://github.com/sarahcnyt/data-journalism)
 
 Sarah Cohen / sarah.cohen@columbia.edu / @sarahcnyt
