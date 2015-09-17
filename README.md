@@ -4,12 +4,12 @@ Skills for data journalism
 Fall 2015
 
 Sarah Cohen / sarah.cohen@columbia.edu / @sarahcnyt
-(Wednesday, 6-9pm)  : [SCHEDULE](Schedule)
+(Thursday, 6-9pm)  : [SCHEDULE](Schedule)
 
 
 
 Rob Gebeloff / rgebeloff@nytimes.com
-(Thursday, 6-9pm) : [SCHEDULE](Schedule)
+(Wednesdsay, 6-9pm) : [SCHEDULE](Schedule)
 
 
 ##Description
