@@ -2,7 +2,7 @@
 
 ### Numbers in the Newsroom
 
-* [Handout](http://sarahcnyt.github.io/stabile/docs/danger.pdf) on newsroom math. 
+* [Handout](danger.pdf) on newsroom math. 
 * [Slides](http://slid.es/sarahcnyt/numbers-in-the-newsroom?token=hxYHcnupzvZc9iyjd9ybetVBib8r) from class
 * [Story](http://businessjournalism.org/2012/03/16/danger-numbers-in-the-newsroom-tips-from-sarah-cohen-on-taming-digits-in-stories/) about the same lecture Sarah gave at a conference
 * [Tips from Chad Skelton](https://docs.google.com/document/d/1efFDOmman2tXRhDKXgvOmfAqLtH1rifNEFDsvbx0StY/edit?usp=sharing) culled from NICAR-L suggestions.
