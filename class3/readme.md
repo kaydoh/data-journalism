@@ -6,7 +6,7 @@ Most of the formulas you'll need in your work come from two IRE handouts. I've p
 
 * A review of [Excel formulas](Excelformulas.pdf), from Jaimi Dowdell.
 * [My Favorite (Excel) Things](https://github.com/sarahcnyt/stabile/blob/master/xl/3346.pdf?raw=true), by Mary Jo Webster.
-* A nearly [20-year-old set of handouts](xlhandouts.pdf) created by Sarah for IRE training. Your Excel will look different, but the ideas are all the same. 
+* A nearly [20-year-old set of handouts](XLhandouts.pdf) created by Sarah for IRE training. Your Excel will look different, but the ideas are all the same. 
 
 ## Review of last week's homework
 
@@ -39,7 +39,7 @@ Use the same anchoring when you use the **rank** formula
 ## Class 3 materials
 ### First pivot tables and filters
 We used the baseball salaries to look at sorting, median, mode, filtering and pivot tables. 
-There is a step-by-step filter and pivot table example using the data [mlb2011.xls](MLB2011.xls?raw=true) data set, called ["Baseball_salaries_2011"](Baseball_salaries_2011.pdf)
+There is a step-by-step filter and pivot table example using the data [mlb2011.xls](MLB2011.xls?raw=true) data set, called ["Baseball\\_salaries\\_2011"](Baseball_salaries_2011.pdf)
 
 ###Other pivot tables
 
