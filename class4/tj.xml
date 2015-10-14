@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?><response code="1"><collection name="poi" count="24" country="US" radius="30" radiusuom="mile" centerpoint="-74.0106,40.89" state="NJ" city="Teaneck" address="" province="" postalcode="07666">
+<poi>
+  <name>TJ's Paramus (605)</name>
+  <_distance>5.12</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>404 Rt 17 N</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Paramus</city>
+  <clientkey>605</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.9481334340567</latitude>
+  <longitude>-74.0713562471554</longitude>
+  <openingcomments></openingcomments>
+  <phone>201-265-9624</phone>
+  <postalcode>07652</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429860907</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Edgewater (606)</name>
+  <_distance>5.14</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>715 River Rd</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Edgewater</city>
+  <clientkey>606</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.8198931891965</latitude>
+  <longitude>-73.9778534643668</longitude>
+  <openingcomments></openingcomments>
+  <phone>201-945-5932</phone>
+  <postalcode>07020</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429860908</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Westwood (602)</name>
+  <_distance>7.20</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>20 Irvington St</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Westwood</city>
+  <clientkey>602</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>9AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.9924001261859</latitude>
+  <longitude>-74.0358393290396</longitude>
+  <openingcomments></openingcomments>
+  <phone>201-263-0134</phone>
+  <postalcode>07675</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429860905</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's 72nd &amp; Broadway (542)</name>
+  <_distance>7.85</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>2073 Broadway</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>New York</city>
+  <clientkey>542</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7785025</latitude>
+  <longitude>-73.982095</longitude>
+  <openingcomments></openingcomments>
+  <phone>212-799-0028</phone>
+  <postalcode>10023</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429861012</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Clifton (610)</name>
+  <_distance>8.22</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>259 Allwood Road</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Clifton</city>
+  <clientkey>610</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.8374625</latitude>
+  <longitude>-74.1518225</longitude>
+  <openingcomments></openingcomments>
+  <phone>973-777-5020</phone>
+  <postalcode>07012</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1676178599</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Chelsea (543)</name>
+  <_distance>10.29</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>675 6th Ave</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>New York</city>
+  <clientkey>543</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.741682</latitude>
+  <longitude>-73.993695</longitude>
+  <openingcomments></openingcomments>
+  <phone>212-255-2106</phone>
+  <postalcode>10010</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429861013</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Union Square&lt;/br&gt;Wine Store (541)</name>
+  <_distance>10.86</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>138 E 14th St</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>New York</city>
+  <clientkey>541</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>9AM - 10PM (Mon-Sat)&lt;br/&gt;12PM - 9PM (Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7337875609756</latitude>
+  <longitude>-73.9883507317073</longitude>
+  <openingcomments></openingcomments>
+  <phone>212-529-6326</phone>
+  <postalcode>10003</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860896</uid>
+  <wine>Yes</wine>
+</poi>
+<poi>
+  <name>TJ's Union Square &lt;/br&gt;Grocery Store (540)</name>
+  <_distance>10.86</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>142 E 14th St</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>New York</city>
+  <clientkey>540</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7337543902439</latitude>
+  <longitude>-73.9882726829268</longitude>
+  <openingcomments></openingcomments>
+  <phone>212-529-4612</phone>
+  <postalcode>10003</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860895</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Scarsdale (531)</name>
+  <_distance>12.14</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>727 White Plains Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Scarsdale</city>
+  <clientkey>531</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.97204</latitude>
+  <longitude>-73.80486</longitude>
+  <openingcomments></openingcomments>
+  <phone>914-472-2988</phone>
+  <postalcode>10583</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860892</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Wayne (603)</name>
+  <_distance>13.02</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>1172 Hamburg Turnpike</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Wayne</city>
+  <clientkey>603</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.9605666666667</latitude>
+  <longitude>-74.2418966666667</longitude>
+  <openingcomments></openingcomments>
+  <phone>973-692-0050</phone>
+  <postalcode>07470</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429860906</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Brooklyn (558)</name>
+  <_distance>13.88</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>130 Court St</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Brooklyn</city>
+  <clientkey>558</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.6896133333333</latitude>
+  <longitude>-73.99243</longitude>
+  <openingcomments></openingcomments>
+  <phone>718-246-8460</phone>
+  <postalcode>11201</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860903</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Larchmont (532)</name>
+  <_distance>14.21</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>1260 Boston Post Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Larchmont</city>
+  <clientkey>532</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.9377874993477</latitude>
+  <longitude>-73.7458825006523</longitude>
+  <openingcomments></openingcomments>
+  <phone>914-833-9110</phone>
+  <postalcode>10538</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860893</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Hartsdale (533)</name>
+  <_distance>14.60</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>215 N Central Ave</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Hartsdale</city>
+  <clientkey>533</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>41.02</latitude>
+  <longitude>-73.79</longitude>
+  <openingcomments></openingcomments>
+  <phone>914-997-1960</phone>
+  <postalcode>10530</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860894</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Queens (557)</name>
+  <_distance>14.62</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>9030 Metropolitan Ave</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Rego Park</city>
+  <clientkey>557</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.71185</latitude>
+  <longitude>-73.85985</longitude>
+  <openingcomments></openingcomments>
+  <phone>718-275-1791</phone>
+  <postalcode>11374</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860902</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Millburn (609)</name>
+  <_distance>18.91</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>187 Millburn Ave</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Millburn</city>
+  <clientkey>609</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.72265</latitude>
+  <longitude>-74.29662</longitude>
+  <openingcomments></openingcomments>
+  <phone>973-218-0912</phone>
+  <postalcode>07041</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429861003</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Florham Park (604)</name>
+  <_distance>20.99</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>176 Columbia Turnpike</address1>
+  <address2></address2>
+  <beer>No</beer>
+  <city>Florham Park</city>
+  <clientkey>604</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7877553333333</latitude>
+  <longitude>-74.3886766666667</longitude>
+  <openingcomments></openingcomments>
+  <phone>973-377-0679</phone>
+  <postalcode>07932</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NJ</state>
+  <uid>1429861028</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Staten Island (559)</name>
+  <_distance>22.22</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>2385 Richmond Ave</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Staten Island</city>
+  <clientkey>559</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.5905956318878</latitude>
+  <longitude>-74.1657691957792</longitude>
+  <openingcomments></openingcomments>
+  <phone>718-370-1085</phone>
+  <postalcode>10314</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429861034</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Westbury (550)</name>
+  <_distance>23.43</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>910 Old Country Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Garden City</city>
+  <clientkey>550</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7449129206092</latitude>
+  <longitude>-73.6056240106934</longitude>
+  <openingcomments></openingcomments>
+  <phone>516-794-0174</phone>
+  <postalcode>11530</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429861045</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Hewlett (554)</name>
+  <_distance>23.71</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>1280 West Broadway</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Hewlett</city>
+  <clientkey>554</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.638925</latitude>
+  <longitude>-73.70162</longitude>
+  <openingcomments></openingcomments>
+  <phone>516-569-7191</phone>
+  <postalcode>11557</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860900</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Westfield (601)</name>
+  <_distance>24.17</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>155 Elm St</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Westfield</city>
+  <clientkey>601</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 10PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.6525659183674</latitude>
+  <longitude>-74.3497171428571</longitude>
+  <openingcomments></openingcomments>
+  <phone>908-301-0910</phone>
+  <postalcode>07090</postalcode>
+  <province></province>
+  <specialalcoholhours>8AM - 10PM (Mon-Sat)&lt;br/&gt;12PM - 10PM (Sun)</specialalcoholhours>
+  <spirits>Yes</spirits>
+  <state>NJ</state>
+  <uid>1429860904</uid>
+  <wine>Yes</wine>
+</poi>
+<poi>
+  <name>TJ's Oceanside (552)</name>
+  <_distance>26.51</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>3418 Long Beach Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Oceanside</city>
+  <clientkey>552</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.62777</latitude>
+  <longitude>-73.6409</longitude>
+  <openingcomments></openingcomments>
+  <phone>516-536-9163</phone>
+  <postalcode>11572</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860898</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Plainview (555)</name>
+  <_distance>27.59</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>425 S Oyster Bay Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Plainview</city>
+  <clientkey>555</clientkey>
+  <comingsoon></comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>9AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.7813398901501</latitude>
+  <longitude>-73.5028057910962</longitude>
+  <openingcomments></openingcomments>
+  <phone>516-933-6900</phone>
+  <postalcode>11803</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860901</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Stamford (529)</name>
+  <_distance>28.36</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>1041 High Ridge Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Stamford</city>
+  <clientkey>529</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>41.1060871158823</latitude>
+  <longitude>-73.5482079373934</longitude>
+  <openingcomments></openingcomments>
+  <phone>203-321-8440</phone>
+  <postalcode>06905</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>CT</state>
+  <uid>1704991299</uid>
+  <wine>No</wine>
+</poi>
+<poi>
+  <name>TJ's Merrick (553)</name>
+  <_distance>28.73</_distance>
+  <_distanceuom>mile</_distanceuom>
+  <address1>1714 Merrick Rd</address1>
+  <address2></address2>
+  <beer>Yes</beer>
+  <city>Merrick</city>
+  <clientkey>553</clientkey>
+  <comingsoon>No</comingsoon>
+  <country>US</country>
+  <directionsnotes></directionsnotes>
+  <fax></fax>
+  <hours>8AM - 9PM (Mon-Sun)</hours>
+  <icon>default</icon>
+  <latitude>40.6538215</latitude>
+  <longitude>-73.558741</longitude>
+  <openingcomments></openingcomments>
+  <phone>516-771-1012</phone>
+  <postalcode>11566</postalcode>
+  <province></province>
+  <specialalcoholhours></specialalcoholhours>
+  <spirits>No</spirits>
+  <state>NY</state>
+  <uid>1429860899</uid>
+  <wine>No</wine>
+</poi>
+</collection></response>

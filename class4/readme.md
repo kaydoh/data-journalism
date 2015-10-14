@@ -53,7 +53,7 @@ The problem with scraping tools is that every site is different, and it's diffic
 The key to scraping is looking at the code underneath your web page, not the page you see on your screen. We're going to use Chrome to do this, but Firebug in Firefox is many peoples' choice. 
 
 #### Example 1:
-Thanks to Prof. Susan McGregor, who has [a great video](https://www.youtube.com/watch?v=fRYdCwuacyg) on the subject of looking under the hood at data structures found in web pages. We're going to use her example of extracting XML from Trader Joe's store sites. We'll work on how to import it into Google Sheets after we've gone through some other exercises. 
+Thanks to Prof. Susan McGregor, who has [a great video](https://www.youtube.com/watch?v=fRYdCwuacyg) on the subject of looking under the hood at data structures found in web pages. We're going to use her example of extracting XML from Trader Joe's store sites. We'll work on how to import it into Google Sheets after we've gone through some other exercises. (In Rob's class, we'll use the "XML Miracle" exercise and try to go from Web to XML in 10 steps...')
 
 Lesson: There is often structured data underneath a page, so you don't even have to scrape. (MS Excel imports some simple XML on Windows, not Mac. We'll look at OpenRefine in our last week, and that is another way to get it.)
 
