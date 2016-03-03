@@ -1,19 +1,16 @@
 #Advanced data cleaning with OpenRefine
 Sarah Cohen / sarah.cohen@nytimes.com / Denver CAR 2016
 
-This tutorial is going to walk through a cleanup of a spreadsheet compiled from the Medicaid long-term managed care reports from New York State. We knew the spreadsheet would only be used for a few minutes -- its point was to choose a plan to focus on for a story -- so it wasn't worth a lot of work. Using OpenRefine and regular expressions made a quick job of what could have taken a long time. 
+This tutorial walks through a cleanup of a spreadsheet compiled from the Medicaid long-term managed care reports from New York State.  This data was only going to be used for a few minutes as a way to determine which company would make a good subject based on its growth and size.  It wasn't worth a lot of work and Using OpenRefine and regular expressions made a quick job of it. 
 
-(Don't worry too much about the substance of the data -- it's a health care plan for low-income people who need home care or nursing care.) 
-
-The original site is: 
+The original data is : 
 [https://www.health.ny.gov/health_care/managed_care/reports/enrollment/monthly/](https://www.health.ny.gov/health_care/managed_care/reports/enrollment/monthly/)
 
-Each month is shown as a separate spreadsheet that also had some extraneous information. We're going to start with a version of these spreadsheets I created by combining them all into one large sheet using KuTools (only available for Windows). 
+Each month is a separate workbook that also had some extraneous information. I combined all of the individual sheets we needed into one huge spreadsheet using [KuTools](http://www.extendoffice.com/product/kutools-for-excel.html), a utility available on for Windows versions of Excel.  
 
-We'll be working from this spreadsheet: [https://github.com/sarahcnyt/stabile/blob/master/cleanup/exampledata/all-longterm-manged-care.xlsx](https://github.com/sarahcnyt/stabile/blob/master/cleanup/exampledata/all-longterm-manged-care.xlsx)
+The spreadsheet, called [all-longterm-managed-care.xlsx](all-longterm-managed-care.xlsx?raw=true) is in this folder. 
 
 For future reference, Arcadia Falcone has created a [cheat sheet](http://arcadiafalcone.net/GoogleRefineCheatSheets.pdf) for regular expressions in OpenRefine, but there are lots of other cheat sheets out there. Each language has a slightly different implementation, but the general idea stays the same. 
-
 
 ### Examine the spreadsheet and "envision success"
 
@@ -23,7 +20,7 @@ It's easier to scroll through a spreadsheet in Excel than in OpenRefine, so take
 * The format of certain items changes over time.
 * It's far from "tidy". 
 
-Now, envision success. What columns would you want to create if it were tidy? Here's a list that I came up with:
+Now, envision success. What would it look like if it had what you wanted? Each row would be filled out with data, and it might include:
 
 * Date of report 
 * Type of plan. In this case, it's "PACE" vs. "Partial capitation". Don't worry what they mean for now, just notice there are two types of plans on the spreadsheet.
@@ -31,7 +28,7 @@ Now, envision success. What columns would you want to create if it were tidy? He
 * County or area (NYC)
 * Enrollment.
 
-In a tidy worksheet, every cell would be filled in with a value. You might also want to preserve some of the totals to check your work. In this exercise, we'll only choose the statewide total by company for each month, not the total of all the plans. 
+You might also want to preserve some of the totals to check your work. In this exercise, we'll only choose the statewide total by company for each month, not the total of all the plans. 
 
 ### Import into OpenRefine ###
  
@@ -47,15 +44,19 @@ Look at the row numbers on the left. You can see what it is considering a "recor
 
 I happen to know that there is a problem in some of the records that becomes confusing later on. While you have record mode on, use a text filter to find "UPSTATE TOTALS" in Column 2. You should find 7 records, which you can then delete (under All->Rows->Remove...).  
 
+![](images/filterremove.png)
+
 Then close your filter, and turn on "Row" mode. You should have 6,636 rows. 
 
 ### Your first regex: Extract the report month and year
 
 #### Find the right rows
 
-If you looked at the spreadsheet, you'd see that the month and year of the report date have several different incarnations. Sometimes, it looks like "NYS JANUARY, 2009". Sometimes it looks like "NYS, FEBRUARY 2014" and other variations. 
+When you looked at the spreadsheet you might have noticed that the month and year of the report date have several different formats. Sometimes the cell looks like "NYS JANUARY, 2009". Sometimes it looks like "NYS, FEBRUARY 2014" and other variations. 
 
-This is a good opportunity to see how a regular expression works. In OpenRefine, you can use regular expressions in filters or in transformations. This time we'll use a filter. Make sure to select "case sensitive" and "regular expression" options on the filter. 
+This is a good opportunity to see how a regular expression works. In OpenRefine, you can use regular expressions in filters or in transformations. This time we'll use a filter on Column 1. (Don't forget to turn Row mode on instead of Record mode)
+
+Make sure to select "case sensitive" and "regular expression" options on the filter. 
 
 A regular expression is a *pattern*, which means you can be less specific than in a typical search-and-replace. We'll use two types of patterns here: A wildcard (.*), meaning any character repeated any number of times -- or not at all -- and a special character type for whitespace (\s) and digits (\d): 
 
@@ -68,7 +69,9 @@ An asterisk next to a part of the pattern means "some or none" of the previous c
 ![](images/firstregexfilter.png)
 
 
-Once you're confident you have all of the date rows isolated and filtered, create a column based on  Column 1, remove your filter and use the cell transformation Fill Down to fill in all the rows. 
+Once you're confident you have all of the date rows isolated and filtered, use **Edit column->Add column based on this column** to create a date field. R
+
+Remove your filter and use **Edit cells->Fill down** to fill in all the rows. 
 
 
 ![](images/filldown.png)
@@ -76,9 +79,9 @@ Once you're confident you have all of the date rows isolated and filtered, creat
 
 #### Create a consistent format
 
-We're now going to use the regular expression to extract the month and year of the date, and then turn it into a date field that can be sorted when you're done. 
+We're now going to use the regular expression to extract the month and year of the date. Then we can turn it into a true date field that can be sorted when you're done. 
 
-Using regular expressions in the transformation menu is a little different than in the filter. Specifically, you have to provide wild cards on either side of your regular expression. They're not assumed they way they are in other languages and in the filter. They also require you to include a "/" at the beginning and end of the expression, which is NOT in quotation marks. (The "/" is pretty common as a way to start and end regular expressions in other languages.)
+To change the values, use **Edit cells->Transform** . Using regular expressions in this calculator box is different than using them in the filter. Specifically, you have to provide wild cards on either side of your regular expression. They're not assumed they way they are in other languages and in the filter. They also require you to include a "/" at the beginning and end of the expression, which is NOT in quotation marks. (The "/" is pretty common as a way to start and end regular expressions in other languages.)
 
 I'm not creating a new field, since I can always use the Undo/Redo menu in this case to re-extract my dates if I mess up. 
 
@@ -103,9 +106,13 @@ Finally, let's turn this into a real date:
 			(be very careful. If you use YYYY it will be wrong.)
 
 
-With a couple of commands you now have a consistent date field, which later on can be sorted. (Don't try it yet!)
 
 ![](images/dates.png)
+
+
+With a couple of commands you now have a consistent date field, which later on can be sorted. (Don't try it yet!)
+
+Although we did this step by step, many of these steps could have been combined into just one or two. You could have captured the date at the same time as making the new column, and you could have created the date at the same time as replacing the commas.
 
 
 ### Your second regex: Using anchors and an "OR" condition
@@ -124,16 +131,15 @@ Try it without the anchor and see what you get. (You should see "Total MLTC PACE
 
 Before we go any further, create a column based on Column 1's value -- this will be our final plan name column, but we don't want to wreck the "record" vs. "row" idea. 
 
-
 ### Clean up on your own. 
 
 The next steps are pretty straightforward.
 
 * Fill down the new column. 
-* Filter for rows you want to delete so you have just the rows with the names of counties and the county totals for a company left. (Once you've filtered or selected through facets, remove rows under the "All" dropdown at the left.
-
-![](images/removerows.png)
+* Filter for rows you want to delete so you have just the rows with the names of counties and the county totals for a company left.
  
+To remove a row, use the "All" column on the left, **All->Edit rows->Remove all matching rows**. If you go too far, you can always use the Undo/Redo tab to get back.  
+
 * You'll probably want a regular expression to find the footnotes. In order to use the character "(", you have to escape it with a backslash: 
 				
 			\(\d+\)
@@ -151,7 +157,7 @@ We have one last job to do: Get the company totals into another column, and then
 
 * Filter or facet to show the Total rows in Column 2, then create a new column based on Column 3. Remember, the idea is to get the totals next to the detail rather than below it.  
 
-* Switch to Show As: records instead of rows. You should see that OpenRefine is changing the record after each entry in Column 1. 
+* Switch to **Show as: records** instead of rows. You should see that OpenRefine is changing the record after each entry in Column 1. 
 
 We need to apply all of the totals to each row within the company total. Under the company total column, choose a cell transformation to bring up the formula box. Here's the formula to whatever is in the last row to all rows in the record: 
 
@@ -167,4 +173,7 @@ Once you switch back to the row view, you can delete the Total rows.  (There are
 
 ###**_Congratulations! You now have tidy data!_** 
 
-You're ready to put the data into a pivot table, or into Tableau or any other analysis tool. 
+You're ready to put the data into a pivot table, or into Tableau or any other analysis tool. Here's the chart from Tableau that we used to choose the company.  (It turned out the 2008 data was spotty, so we started the analysis in 2010.)
+
+![](images/mltc-picture.png)
+
