@@ -1,0 +1,429 @@
+[
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "UPSTATE",
+          "name": "Column 2",
+          "type": "text",
+          "columnName": "Column 2"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column report date at index 1 based on column Column 1 using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": true,
+          "query": "\\s*NYS.*\\d{4}",
+          "name": "Column 1",
+          "type": "text",
+          "columnName": "Column 1"
+        }
+      ]
+    },
+    "newColumnName": "report date",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Column 1",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/fill-down",
+    "description": "Fill down cells in column report date",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "report date"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column report date using expression grel:value.match(/.*NYS[, ]+(.*\\d{4}).*/)[0]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "report date",
+    "expression": "grel:value.match(/.*NYS[, ]+(.*\\d{4}).*/)[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column report date using expression grel:value.replace(/[, ]+/, ' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "report date",
+    "expression": "grel:value.replace(/[, ]+/, ' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column report date using expression grel:value.toDate('MMM yyyy')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "report date",
+    "expression": "grel:value.toDate('MMM yyyy')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column plan type at index 1 based on column Column 1 using expression grel:value.match(/.*MLTC (PACE|PARTIAL CAPITATION).*/)[0]",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": true,
+          "query": "^\\s*(MLTC PACE|MLTC PARTIAL)",
+          "name": "Column 1",
+          "type": "text",
+          "columnName": "Column 1"
+        }
+      ]
+    },
+    "newColumnName": "plan type",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Column 1",
+    "expression": "grel:value.match(/.*MLTC (PACE|PARTIAL CAPITATION).*/)[0]",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/fill-down",
+    "description": "Fill down cells in column plan type",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "plan type"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column plan name at index 1 based on column Column 1 using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "plan name",
+    "columnInsertIndex": 1,
+    "baseColumnName": "Column 1",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/fill-down",
+    "description": "Fill down cells in column plan name",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "plan name"
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "\\(\\d+\\)",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "NYS.*\\d{4}",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "MANAGED LON",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "BY PLAN",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "MLTC ",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "NOTE",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "regex",
+          "caseSensitive": false,
+          "query": "Total St",
+          "name": "plan name",
+          "type": "text",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column company total at index 6 based on column Column 3 using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Total",
+                "l": "Total"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "Column 2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "Column 2"
+        }
+      ]
+    },
+    "newColumnName": "company total",
+    "columnInsertIndex": 6,
+    "baseColumnName": "Column 3",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column company total using expression grel:row.record.cells[\"company total\"].value[-1]",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "company total",
+    "expression": "grel:row.record.cells[\"company total\"].value[-1]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": true,
+          "selection": [
+            {
+              "v": {
+                "v": "Total",
+                "l": "Total"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "Column 2",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "Column 2"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+      "plan name",
+      "plan type",
+      "report date",
+      "Column 2",
+      "Column 3",
+      "company total"
+    ]
+  },
+  {
+    "op": "core/row-removal",
+    "description": "Remove rows",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "PLAN NAME",
+                "l": "PLAN NAME"
+              }
+            },
+            {
+              "v": {
+                "v": "Plan Name",
+                "l": "Plan Name"
+              }
+            },
+            {
+              "v": {
+                "v": "PROVIDER",
+                "l": "PROVIDER"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "plan name",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "plan name"
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column original_rowid at index 1 based on column plan name using expression grel:row.index",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "original_rowid",
+    "columnInsertIndex": 1,
+    "baseColumnName": "plan name",
+    "expression": "grel:row.index",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/row-reorder",
+    "description": "Reorder rows",
+    "mode": "record-based",
+    "sorting": {
+      "criteria": [
+        {
+          "errorPosition": 1,
+          "valueType": "date",
+          "column": "report date",
+          "blankPosition": 2,
+          "reverse": false
+        }
+      ]
+    }
+  },
+  {
+    "op": "core/column-reorder",
+    "description": "Reorder columns",
+    "columnNames": [
+      "original_rowid",
+      "plan name",
+      "plan type",
+      "report date",
+      "Column 2",
+      "Column 3",
+      "company total"
+    ]
+  }
+]
