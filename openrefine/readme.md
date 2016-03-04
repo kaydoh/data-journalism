@@ -25,7 +25,7 @@ It's easier to scroll through a spreadsheet in Excel than in OpenRefine, so take
 
 Now, envision success. What would it look like if it had what you wanted? Each row would be filled out with data, and it might include:
 
-* Date of report 
+* The date (like January 2009), in sortable form. 
 * Type of plan. In this case, it's "PACE" vs. "Partial capitation". Don't worry what they mean for now, just notice there are two types of plans on the spreadsheet.
 * Name of plan
 * County or area (NYC)
@@ -45,11 +45,13 @@ When you first open the file, it will show up as "Records", not "Rows". The diff
 
 Look at the row numbers on the left. You can see what it is considering a "record" vs. a "row".
 
-I happen to know that there is a problem in some of the records that becomes confusing later on. While you have record mode on, use a text filter to find "UPSTATE TOTALS" in Column 2. You should find 7 records, which you can then delete (under **All->Edit rows->Remove all matching rows**).  
+I happen to know that there is a problem in some of the records that becomes confusing later on. Using the drop-down menu on Column 2, create a **Text filter** and search for "UPSTATE TOTALS". You should find 7 records, which you can then delete using the leftmost column **All->Edit rows->Remove all matching rows**).  
 
 ![](images/filterremove.png)
 
-Then close or clear your filter, and switch to **Show as: rows** . You should have 6,636 rows. 
+This shows one of the most powerful parts of OpenRefine: it only acts on rows or records that are showing, not those that are unselected. You're going to use that to your advantage later on.
+
+Remove or reset the filter and switch to **Show as: rows** . You should have 6,636 rows. 
 
 ### Your first regex: Extract the report month and year
 
@@ -57,7 +59,7 @@ Then close or clear your filter, and switch to **Show as: rows** . You should ha
 
 When you looked at the spreadsheet you might have noticed that the month and year of the report date have several different formats. Sometimes the cell looks like "NYS JANUARY, 2009". Sometimes it looks like "NYS, FEBRUARY 2014" and other variations. 
 
-This is a good opportunity to see how a regular expression works. In OpenRefine, you can use regular expressions in filters or in transformations. This time we'll use a filter on Column 1. (Don't forget to turn Row mode on instead of Record mode)
+This is a good opportunity to see how a regular expression works. In OpenRefine, you can use regular expressions in filters or in cell transformations. This time we'll use a filter on Column 1. (Don't forget to turn Row mode on instead of Record mode)
 
 Make sure to select "case sensitive" and "regular expression" options on the filter. 
 
@@ -90,7 +92,9 @@ I'm not creating a new field, since I can always use the Undo/Redo menu in this 
 
 We're going to use a *capture group* in the regular expression to extract the name of the month and the year. A capture group is something enclosed in parentheses that you want to use over again. It's the piece of the pattern that, in this case, you want to keep.
 
-We'll also use a  *character class* to look for any combination of spaces and commas. 
+Use the same method for the next steps. 
+
+We'll use a  *character class* to look for any combination of spaces and commas. 
 				
 				[, ]+ 
 				means one or more commas, spaces or any combination of them. 
@@ -137,15 +141,30 @@ Sometimes you need to anchor your regex to the beginning or end of the string, a
 
 An "or" in a regex is the vertical bar "|". Anchoring to the beginning of a field is a caret (^) and the end is a dollar sign. 
 
+Make sure you have a filter on Column 1, with the case sensitive and regular expression boxes checked. Try to make the regular expression yourself before looking at the screen shot. 
+
 ![](images/anchoror.png)
 
-Try it without the anchor and see what you get. (You should see "Total MLTC PACE..." Once you have the rows showing that you want, try creating a new column based on Column 1, extracting out only the words you want: 
+Try it without the anchor and see what you get. (You should see "Total MLTC PACE..." 
+
+Once you have the rows showing that you want, use the Column 1 menu item **Edit column -> Add column based on this column**, extracting out only the words you want using parentheses to capture the words.  
 
 ![](images/pacepartial.png)
 
-Before we go any further, create a column based on Column 1's value -- this will be our final plan name column, but we don't want to wreck the "record" vs. "row" idea. 
+Walking through this expression:
+ 
+* value.match  is the function, "match", acting on the "value" of this column. You could make it work on another column by saying, for example, cells["Column 2"].value.match
+* **/.../** creates the regular expression
+* .*  (period-asterisk) says "anything or nothing"
+* MLTC searches for those exact uppercase letters,  in order.
+* (PACE|PARTIAL CAPITATION) are the words we want to extract into the new column -- this is the capture group.
+* .*  means "anything or nothing" again. In OpenRefine expression boxes, you don't use anchors the way you did in the filter. Instead, you have to use wildcards to avoid an implied anchor at both ends.
+* [0] tell Refine to use the first capture group as the answer. (All the captures are returned as an array or list of items, even if there is only one.)  
+
 
 ### Clean up on your own. 
+
+Before we go any further, create a column based on Column 1's value -- this will be our final plan name column, but we don't want to wreck the "record" vs. "row" idea. I called it **plan name**.   
 
 The next steps are pretty straightforward.
 
@@ -154,11 +173,11 @@ The next steps are pretty straightforward.
 * You'll probably want a regular expression to find the footnotes. In order to use the character "(", you have to escape it with a backslash: 
 				
 			\(\d+\)
-			finds (1), for example, or (37)
+			finds (1) or (37) but not (a)
 
 * you can probably use the easier facets for finding empty rows and titles. 
 
-The filters I used were the ones for the dates, MLTC, Note, BY PLAN, Total Statewide and a few more. You'll see them pretty quickly. I got 5526 rows after deleting, but there are actually still a few extra rows in there -- you might have caught them.
+The filters I used were the ones for the original dates we found in step 1, MLTC, Note, BY PLAN, Total Statewide and a few more. You'll see them pretty quickly. I got 5526 rows after deleting, but there are actually still a few extra rows in there -- you might have caught them.
 
 ![](images/afterdelete.png)
 
@@ -184,7 +203,9 @@ Once you switch back to the row view, you can delete the Total rows.  (There are
 
 ###**_Congratulations! You now have tidy data!_** 
 
-You're ready to put the data into a pivot table, or into Tableau or any other analysis tool. Here's the chart from Tableau that we used to choose the company.  (It turned out the 2008 data was spotty, so we started the analysis in 2010.)
+Before you put the data into a pivot table, don't forget to use Refine's powerful clustering capability to standardize the plan names. 
+
+Here's the chart from Tableau that we used to choose the company.  (It turned out the 2008 data was spotty, so we started the analysis in 2010, and we limited it to those operating in New York City.)
 
 ![](images/mltc-picture.png)
 
