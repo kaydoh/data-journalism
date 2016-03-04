@@ -8,7 +8,7 @@ The original data is :
 
 Each month is a separate workbook that also had some extraneous information. I combined all of the individual sheets we needed into one huge spreadsheet using [KuTools](http://www.extendoffice.com/product/kutools-for-excel.html), a utility available  for Windows versions of Excel.  
 
-The spreadsheet, called [all-longterm-managed-care.xlsx](all-longterm-managed-care.xlsx?raw=true) is in this folder. 
+The spreadsheet, called [all-longterm-managed-care.xlsx](https://github.com/sarahcnyt/data-journalism/blob/master/openrefine/all-longterm-manged-care.xlsx?raw=true) is in this folder. 
 
 For future reference, Arcadia Falcone has created a [cheat sheet](http://arcadiafalcone.net/GoogleRefineCheatSheets.pdf) for regular expressions in OpenRefine, but there are lots of other cheat sheets out there. Each language has a slightly different implementation, but the general idea stays the same. 
 
