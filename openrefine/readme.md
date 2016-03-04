@@ -20,6 +20,9 @@ It's easier to scroll through a spreadsheet in Excel than in OpenRefine, so take
 * The format of certain items changes over time.
 * It's far from "tidy". 
 
+![](images/origspreadsheet.png)
+
+
 Now, envision success. What would it look like if it had what you wanted? Each row would be filled out with data, and it might include:
 
 * Date of report 
