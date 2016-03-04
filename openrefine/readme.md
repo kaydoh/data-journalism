@@ -1,18 +1,18 @@
 #Advanced data cleaning with OpenRefine
 Sarah Cohen / sarah.cohen@nytimes.com / Denver CAR 2016
 
-This tutorial walks through a cleanup of a spreadsheet compiled from the Medicaid long-term managed care reports from New York State.  This data was only going to be used for a few minutes as a way to determine which company would make a good subject based on its growth and size.  It wasn't worth a lot of work and Using OpenRefine and regular expressions made a quick job of it. 
+This tutorial walks through a cleanup of a spreadsheet compiled from the Medicaid long-term managed care reports from New York State.  This data was only going to be used for a few minutes as a way to determine which company would make a good subject based on its growth and size.  It wasn't worth a lot of work and using OpenRefine and regular expressions made a quick job of it. 
 
 The original data is : 
 [https://www.health.ny.gov/health_care/managed_care/reports/enrollment/monthly/](https://www.health.ny.gov/health_care/managed_care/reports/enrollment/monthly/)
 
-Each month is a separate workbook that also had some extraneous information. I combined all of the individual sheets we needed into one huge spreadsheet using [KuTools](http://www.extendoffice.com/product/kutools-for-excel.html), a utility available on for Windows versions of Excel.  
+Each month is a separate workbook that also had some extraneous information. I combined all of the individual sheets we needed into one huge spreadsheet using [KuTools](http://www.extendoffice.com/product/kutools-for-excel.html), a utility available  for Windows versions of Excel.  
 
 The spreadsheet, called [all-longterm-managed-care.xlsx](all-longterm-managed-care.xlsx?raw=true) is in this folder. 
 
 For future reference, Arcadia Falcone has created a [cheat sheet](http://arcadiafalcone.net/GoogleRefineCheatSheets.pdf) for regular expressions in OpenRefine, but there are lots of other cheat sheets out there. Each language has a slightly different implementation, but the general idea stays the same. 
 
-### Examine the spreadsheet and "envision success"
+### Examine the spreadsheet and envision success
 
 It's easier to scroll through a spreadsheet in Excel than in OpenRefine, so take a good look at what you have. You should notice: 
 
@@ -42,11 +42,11 @@ When you first open the file, it will show up as "Records", not "Rows". The diff
 
 Look at the row numbers on the left. You can see what it is considering a "record" vs. a "row".
 
-I happen to know that there is a problem in some of the records that becomes confusing later on. While you have record mode on, use a text filter to find "UPSTATE TOTALS" in Column 2. You should find 7 records, which you can then delete (under All->Rows->Remove...).  
+I happen to know that there is a problem in some of the records that becomes confusing later on. While you have record mode on, use a text filter to find "UPSTATE TOTALS" in Column 2. You should find 7 records, which you can then delete (under **All->Edit rows->Remove all matching rows**).  
 
 ![](images/filterremove.png)
 
-Then close your filter, and turn on "Row" mode. You should have 6,636 rows. 
+Then close or clear your filter, and switch to **Show as: rows** . You should have 6,636 rows. 
 
 ### Your first regex: Extract the report month and year
 
@@ -69,7 +69,7 @@ An asterisk next to a part of the pattern means "some or none" of the previous c
 ![](images/firstregexfilter.png)
 
 
-Once you're confident you have all of the date rows isolated and filtered, use **Edit column->Add column based on this column** to create a date field. R
+Once you're confident you have all of the date rows isolated and filtered, use **Edit column->Add column based on this column** to create a date field. 
 
 Remove your filter and use **Edit cells->Fill down** to fill in all the rows. 
 
@@ -85,8 +85,19 @@ To change the values, use **Edit cells->Transform** . Using regular expressions 
 
 I'm not creating a new field, since I can always use the Undo/Redo menu in this case to re-extract my dates if I mess up. 
 
-We're going to use a "capture group" in the regular expression to extract the name of the month and the year. A capture group is something enclosed in parentheses that you want to use over again. It's the piece of the pattern that, in this case, you want to keep. 
+We're going to use a *capture group* in the regular expression to extract the name of the month and the year. A capture group is something enclosed in parentheses that you want to use over again. It's the piece of the pattern that, in this case, you want to keep.
 
+We'll also use a  *character class* to look for any combination of spaces and commas. 
+				
+				[, ]+ 
+				means one or more commas, spaces or any combination of them. 
+				The + is used instead of a * to indicate that at least one of these characters must be found. 
+
+				Another examples of a character classes is
+				[A-Za-z0-9]
+			    (any letter or number) 
+
+				
 The function for OpenRefine's regex matching is called match. In this case, we're using the value in the same column, so it's 
 
 				value.match(/pattern/)[which match]
@@ -94,7 +105,7 @@ The function for OpenRefine's regex matching is called match. In this case, we'r
 
 ![](images/valuematch.png)
 
-Try to piece this one together. The [0] at the end tells you which of the items in parentheses to keep. In this case, there is only one, so it's the first one. Remember that .* means "anything or nothing", and [, ]+ means a comma or space or any combination.
+Try to piece this one together. The [0] at the end tells you which of the items in parentheses to keep. In this case, there is only one, so it's the first one. Remember that .* means "anything or nothing", and [, ]+ means at least one comma or space or any combination.
 
 Now you can use the same idea to replace the various combinations of commas and spaces between the month and year by using a similar command: 
 
@@ -119,7 +130,7 @@ Although we did this step by step, many of these steps could have been combined 
 
 Our second field is one that shows us what kind of plan the item is -- PACE or Partial Capitation. (Don't worry what they mean. It's two different ways of paying.)
 
-Sometimes you need to anchor your regex to the beginning or end of the row, and sometimes you want to use an "OR" condition -- as in PACE OR PARTIAL....
+Sometimes you need to anchor your regex to the beginning or end of the string, and sometimes you want to use an "OR" condition -- as in PACE OR PARTIAL....
 
 An "or" in a regex is the vertical bar "|". Anchoring to the beginning of a field is a caret (^) and the end is a dollar sign. 
 
@@ -137,9 +148,6 @@ The next steps are pretty straightforward.
 
 * Fill down the new column. 
 * Filter for rows you want to delete so you have just the rows with the names of counties and the county totals for a company left.
- 
-To remove a row, use the "All" column on the left, **All->Edit rows->Remove all matching rows**. If you go too far, you can always use the Undo/Redo tab to get back.  
-
 * You'll probably want a regular expression to find the footnotes. In order to use the character "(", you have to escape it with a backslash: 
 				
 			\(\d+\)
@@ -159,7 +167,7 @@ We have one last job to do: Get the company totals into another column, and then
 
 * Switch to **Show as: records** instead of rows. You should see that OpenRefine is changing the record after each entry in Column 1. 
 
-We need to apply all of the totals to each row within the company total. Under the company total column, choose a cell transformation to bring up the formula box. Here's the formula to whatever is in the last row to all rows in the record: 
+We need to apply all of the totals to each row within the company total. Under the company total column, choose a cell transformation to bring up the formula box. Here's the formula to put whatever is in the last row to all rows in the record: 
 
 			row.record.cells["company total"].value[-1]
 			
